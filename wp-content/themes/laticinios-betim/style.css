@@ -415,10 +415,28 @@ object {
 9.1 Setup
 -----------------------*/
 
+@font-face {
+	font-family: "MuseoSans300";
+  src:  url('assets/fonts/MuseoSans300.otf') format("opentype");
+  font-weight: 300;
+}
+
+@font-face {
+	font-family: "MuseoSans500";
+  src:  url('assets/fonts/MuseoSans500.otf') format("opentype");
+  font-weight: 500;
+}
+
+@font-face {
+	font-family: "MuseoSans700";
+  src:  url('assets/fonts/MuseoSans700.otf') format("opentype");
+  font-weight: 700;
+}
+
 body {
-  font-family: sans-serif ;
+  font-family: "MuseoSans500", sans-serif ;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 500;
   background-color: #ccc;
 }
 
@@ -545,9 +563,115 @@ ul li {
 	top: 2px;
 }
 
+/* Navigation */
+
+.navbar-brand {
+	width: 100%;
+}
+
+.navbar-brand img {
+	display: block;
+	width: 100%;
+	height: auto;
+	transform: translate(0%,-45%);
+	margin: 0 auto;
+}
+
+.custom-navbar.navbar-default {
+  background-color: #faa41a;
+  border-color: transparent;
+  border-radius: 0;
+  padding: 5px 0;
+}
+
+.custom-navbar .navbar-nav {
+	width: 80%;
+}
+
+.custom-navbar .navbar-nav>li {
+	margin-right: 5%;
+}
+
+.custom-navbar .navbar-nav>li:last-child {
+	margin-right: 0;
+}
+
+.custom-navbar.navbar-default .navbar-collapse {
+	border-color: #fff602;
+	margin-top: 0;
+}
+
+.custom-navbar.navbar-default .navbar-nav>li>a:link,
+.custom-navbar.navbar-default .navbar-nav>li>a:visited {
+	color: #fff;
+	font-size: 1.2em;
+}
+
+.custom-navbar.navbar-default .navbar-nav>li>a:hover,
+.custom-navbar.navbar-default .navbar-nav>li>a:active {
+	color: #fff602;
+}
+
+.custom-navbar.navbar-default .navbar-toggle {
+	border-color: transparent;
+}
+
+.custom-navbar.navbar-default .navbar-toggle:hover,
+.custom-navbar.navbar-default .navbar-toggle:focus {
+	background-color: #fff602;
+}
+
+.custom-navbar.navbar-default .navbar-toggle .icon-bar {
+	background-color: #f67605;
+}
+
 /*-----------------------
 9.X Queries
 -----------------------*/
+
+@media (max-width: 1200px) {
+	
+	/* Header - Navigation */
+	
+	.custom-navbar .navbar-nav>li {
+		margin-right: 2%;
+	}
+	
+}
+
+@media (max-width: 990px) {
+	
+	/* Header - Navigation */
+	
+	.custom-navbar .navbar-nav {
+  	width: 70%;
+	}
+	
+	.navbar-brand img {
+    transform: translate(0%,-25%);
+	}
+	
+}
+
+@media (max-width: 768px) {
+	
+	/* Header - Navigation */
+	
+	.navbar-brand {
+    width: 180px;
+	}
+	
+	.navbar-brand img {
+		width: 80%;
+    transform: translate(0,-40%);
+		margin: 0;
+	}
+	
+	.custom-navbar.navbar-default .navbar-collapse {
+		margin-top: 5%;
+	}
+	
+}
 
 @media (max-width: 460px) {
 	
@@ -559,6 +683,15 @@ ul li {
 	
 	/* Header */
 	
-
+	.custom-pull.pull-right {
+		float: none!important;
+	}
+	
+	/* Header - Navigation */
+	
+	.navbar-brand img {
+    width: 45%;
+    transform: translate(0,-32%);
+	}
 	
 }
