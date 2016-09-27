@@ -35,3 +35,20 @@
 
 <body <?php body_class(); ?>>
 	<div id="page" class="site">
+  
+  <header id="header">
+    <div class="pre-menu">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-sm-6 pull-right">
+            <div class="search-wrapper">
+              <?php get_search_form(); ?>
+            </div>
+            <div class="buy-wrapper">
+              <a href="#" title="Comprar"><i class="ion-ios-cart"></i>Quero Comprar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>

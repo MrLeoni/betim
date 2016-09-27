@@ -419,7 +419,7 @@ body {
   font-family: sans-serif ;
   font-size: 14px;
   font-weight: 400;
-  background-color: #ffffff;
+  background-color: #ccc;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -436,7 +436,7 @@ p {
 }
 
 a {
-  transition: 0.3s ease-in;
+  transition: 0.2s ease-in;
   text-decoration: none;
 }
 
@@ -448,10 +448,117 @@ ul li {
   list-style: none;
 }
 
+/* Search Form */
+
+
+
+/* Classes */
+
 .row {
   padding: 0;
 }
 
 /*-----------------------
+9.2 Header
+-----------------------*/
+
+/* Pre Menu */
+
+.pre-menu {
+	background-color: #f67605;
+	padding: 10px 0;
+}
+
+.search-wrapper,
+.buy-wrapper {
+	display: block;
+	width: 48%;
+	float: left;
+	margin: 0 auto;
+}
+
+.search-wrapper {
+	background-color: #dc5b04;
+	border-radius: 3px;
+	padding: 4px;
+}
+
+.custom-search-form input,
+.custom-search-form .search-btn {
+	display: block;
+	background-color: transparent;
+	border: 0;
+}
+
+.custom-search-form input:focus,
+.custom-search-form .search-btn:focus {
+	outline: none;
+}
+
+.custom-search-form input {
+	width: 80%;
+	float: left;
+	position: relative;
+	top: 3px;
+}
+
+.custom-search-form .search-btn {
+	width: 20%;
+	float: right;
+	color: #f67605;
+	font-size: 1.4em;
+	transition: 0.2s ease-in;
+}
+
+.custom-search-form .search-btn:hover {
+	color: #fff;
+}
+
+.buy-wrapper {
+	margin-left: 4%;
+}
+
+.buy-wrapper a:link,
+.buy-wrapper a:visited {
+	display: block;
+	width: 100%;
+	height: auto;
+	text-align: center;
+	color: #f67605;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 0.9em;
+	background-color: #fff602;
+	border-radius: 3px;
+	padding: 5px 0;
+}
+
+.buy-wrapper a:hover,
+.buy-wrapper a:active {
+	background-color: #fff;
+}
+
+.buy-wrapper a i {
+	margin-right: 10px;
+	font-size: 1.4em;
+	position: relative;
+	top: 2px;
+}
+
+/*-----------------------
 9.X Queries
 -----------------------*/
+
+@media (max-width: 460px) {
+	
+	/* Setup */
+	
+	body {
+		font-size: 12px;
+	}
+	
+	/* Header */
+	
+
+	
+}

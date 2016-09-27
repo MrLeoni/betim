@@ -44,7 +44,8 @@ function laticinios_betim_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary', 'laticinios-betim' ),
+		'header' => esc_html__( 'Cabeçalho', 'laticinios-betim' ),
+		'footer' => esc_html__( 'Rodapé', 'laticinios-betim' ),
 	) );
 
 	/*
