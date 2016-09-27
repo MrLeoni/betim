@@ -138,3 +138,107 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * Register custom post types
+ */
+ 
+ // "Complemento" post ype
+ add_action("init", "complementos");
+ function complementos() {
+ 	
+ 	$labels = array( 'name' => 'Complementos', 'singular_name' => 'Complemento' );
+	$args = array(
+		'labels' => $labels,
+		'public' => true,
+		'publicly_queryable' => true,
+		'show_ui' => true,
+		'query_var' => true,
+		'menu_icon' => 'dashicons-plus',
+		'rewrite' => true,
+		'capability_type' => 'post',
+		'hierarchical' => false,
+		'menu_position' => null,
+		'supports' => array('title','editor','thumbnail')
+	);
+ 	
+ 	register_post_type("complementos", $args);
+ }
+ 
+ // "Receitas" post type
+ add_action("init", "receitas");
+ function receitas() {
+ 	
+ 	$labels = array( 'name' => 'Receitas', 'singular_name' => 'Receita' );
+	$args = array(
+		'labels' => $labels,
+		'public' => true,
+		'publicly_queryable' => true,
+		'show_ui' => true,
+		'query_var' => true,
+		'menu_icon' => 'dashicons-media-text',
+		'rewrite' => true,
+		'capability_type' => 'post',
+		'hierarchical' => false,
+		'menu_position' => null,
+		'supports' => array('title','editor','thumbnail')
+	);
+ 	
+ 	register_post_type("receitas", $args);
+ }
+
+ // "Curiosidades" post type
+ add_action("init", "curiosidades");
+ function curiosidades() {
+ 	
+ 	$labels = array( 'name' => 'Curiosidades', 'singular_name' => 'Curiosidade' );
+	$args = array(
+		'labels' => $labels,
+		'public' => true,
+		'publicly_queryable' => true,
+		'show_ui' => true,
+		'query_var' => true,
+		'menu_icon' => 'dashicons-lightbulb',
+		'rewrite' => true,
+		'capability_type' => 'post',
+		'hierarchical' => false,
+		'menu_position' => null,
+		'supports' => array('title','editor','thumbnail')
+	);
+ 	
+ 	register_post_type("curiosidades", $args);
+ }
+ 
+ /**
+  * Register custom taxonomy for "Complementos" post type
+  */
+  
+  // "Tipo" custom taxonomy
+  add_action("init", "complemento_tipo", 0);
+  function complemento_tipo() {
+  	
+  $labels = array(
+		'name'              => _x( 'Tipos', 'taxonomy general name', 'textdomain' ),
+		'singular_name'     => _x( 'Tipo', 'taxonomy singular name', 'textdomain' ),
+		'search_items'      => __( 'Procurar Tipos', 'textdomain' ),
+		'all_items'         => __( 'Todos os Tipos', 'textdomain' ),
+		'parent_item'       => __( 'Parente Tipos', 'textdomain' ),
+		'parent_item_colon' => __( 'Parentes Tipos:', 'textdomain' ),
+		'edit_item'         => __( 'Editar Tipo', 'textdomain' ),
+		'update_item'       => __( 'Atualizar Tipo', 'textdomain' ),
+		'add_new_item'      => __( 'Adicionar Novo Tipo', 'textdomain' ),
+		'new_item_name'     => __( '', 'textdomain' ),
+		'menu_name'         => __( 'Tipos', 'textdomain' ),
+	);
+
+	$args = array(
+		'hierarchical'      => true,
+		'labels'            => $labels,
+		'show_ui'           => true,
+		'show_admin_column' => true,
+		'query_var'         => true,
+		'rewrite'           => array( 'slug' => 'tipo' ),
+	);
+  	
+  	register_taxonomy("tipo", "complementos", $args);
+  }
