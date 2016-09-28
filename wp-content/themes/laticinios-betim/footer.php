@@ -15,7 +15,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12 col-sm-3">
-					<a class="footer-logo" href="<?php echo esc_html( home_url("/") ); ?>" title="Laticínios Betim"><img src="<?php bloginfo("stylesheet_directory"); ?>/assets/images/logo/logo-betim-minify.svg" alt="Laticínios Betim"></a>
+					<a class="footer-logo" href="<?php echo esc_html( home_url("/") ); ?>" title="Laticínios Betim"><img src="<?php bloginfo("stylesheet_directory"); ?>/assets/images/logo/logo-betim.svg" alt="Laticínios Betim"></a>
 				</div>
 				<div class="col-xs-6 col-sm-3">
 					<?php
@@ -37,7 +37,7 @@
 						<?php
 							// Set args for look into "Rodapé Info" taxonomy inside "Complementos" custom post type and only show one post
 							$footer_query_args = array(
-								"post_per_page"	=> 1,
+								"posts_per_page"	=> 1,
 								"post_type"	=> "complementos",
 								"tax_query"	=> array(array(
 									"taxonomy"	=>	"tipo",

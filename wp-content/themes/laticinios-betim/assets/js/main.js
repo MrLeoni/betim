@@ -1,6 +1,17 @@
 $(document).ready(function() {
   
-  // Delete this line
-  console.log("Script is ready");
+  $(".home-slider").bxSlider({
+    controls: false,
+    auto: true,
+    autoHover: true,
+    pause: 8000,
+    speed: 800,
+  });
+  
+  $(".home-produtos").bxSlider({
+    pager: false,
+    infiniteLoop: false,
+    startSlide: 3,
+  });
   
 });

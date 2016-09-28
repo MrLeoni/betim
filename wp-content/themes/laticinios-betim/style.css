@@ -582,6 +582,8 @@ ul li {
 
 .navbar-brand {
 	width: 100%;
+	z-index: 999;
+  position: relative;
 }
 
 .navbar-brand img {
@@ -597,6 +599,7 @@ ul li {
   border-color: transparent;
   border-radius: 0;
   padding: 5px 0;
+  margin-bottom: 0;
 }
 
 .custom-navbar .navbar-nav {
@@ -751,6 +754,77 @@ ul li {
 .logo-delucca a:hover,
 .logo-delucca a:active {
 	background-position: center top;
+}
+
+/*-----------------------
+9.4 Home
+-----------------------*/
+
+/* Banner */
+
+.slider-wrapper .bx-wrapper {
+	margin: 0 auto 0;
+}
+
+.slider-wrapper .bx-wrapper .bx-viewport {
+	box-shadow: none;
+	border: 0;
+	left: 0;
+}
+
+.slider-wrapper .bx-wrapper .bx-pager {
+	bottom: 5%;
+	padding-top: 0;
+}
+
+.slider-wrapper .bx-wrapper .bx-pager.bx-default-pager a {
+	background-color: #1B68AB;
+}
+
+.slider-wrapper .bx-wrapper .bx-pager.bx-default-pager a:hover,
+.slider-wrapper .bx-wrapper .bx-pager.bx-default-pager a.active {
+	background-color: #f67605;
+}
+
+/* Produtos */
+
+#home-produtos {
+	background-color: #ffe5bf;
+}
+
+#home-produtos .row {
+	overflow: hidden;
+}
+
+#home-produtos .mask {
+	padding: 0 0 25%;
+  background-color: rgba(255, 229, 191, 0.7);
+  position: relative;
+  z-index: 99;
+}
+
+.produtos-slider-wrapper .bx-wrapper .bx-viewport {
+	background-color: transparent;
+	border-color: transparent;
+	box-shadow: none;
+	overflow: visible!important;
+}
+
+.produtos-slider-wrapper .bx-wrapper img {
+	display: inline;
+}
+
+.produtos-slider-wrapper .home-produtos li {
+	height: 300px;
+	line-height: 300px;
+	text-align: center;
+}
+
+.produto-link:link {
+	position: absolute;
+	bottom: -45%;
+	left: 50%;
+	transform: translate(-50%,0);
 }
 
 /*-----------------------
