@@ -40,7 +40,6 @@
 	<div id="page" class="site">
   
   <header id="header">
-    
     <div class="pre-menu">
       <div class="container">
         <div class="row">
@@ -61,7 +60,7 @@
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav" aria-expanded="false">
-            <span class="sr-only">Alternar exbição do menu</span>
+            <span class="sr-only">Alternar exibição do menu</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -71,16 +70,15 @@
         
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="main-nav">
-           <?php
-             $args = array(
-              	"theme_location"	=> "header",
-              	"container"				=> "ul",
-              	"menu_class"			=> "nav navbar-nav navbar-right"
-              );
-              wp_nav_menu($args);
-            ?>
+          <?php
+            $header_menu_args = array(
+              "theme_location"	=> "header",
+              "container"				=> "ul",
+              "menu_class"			=> "nav navbar-nav navbar-right"
+            );
+            wp_nav_menu($header_menu_args);
+          ?>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container -->
     </nav>
-    
   </header>

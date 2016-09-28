@@ -88,13 +88,13 @@ add_action( 'after_setup_theme', 'laticinios_betim_content_width', 0 );
  */
 function laticinios_betim_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'laticinios-betim' ),
+		'name'          => esc_html__( 'Rodapé', 'laticinios-betim' ),
 		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'laticinios-betim' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'description'   => esc_html__( 'Adicione widgets aqui', 'laticinios-betim' ),
+		'before_widget' => '<section class="widget-wrapper">',
 		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
 	) );
 }
 add_action( 'widgets_init', 'laticinios_betim_widgets_init' );

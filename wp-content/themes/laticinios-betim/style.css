@@ -454,7 +454,7 @@ p {
 }
 
 a {
-  transition: 0.2s ease-in;
+  transition: 0.3s ease-out;
   text-decoration: none;
 }
 
@@ -474,6 +474,21 @@ ul li {
 
 .row {
   padding: 0;
+}
+
+.museo-300 {
+	font-family: "MuseoSans300", sans-serif;
+	font-weight: 300;
+}
+
+.museo-500 {
+	font-family: "MuseoSans500", sans-serif;
+	font-weight: 500;
+}
+
+.museo-700 {
+	font-family: "MuseoSans700", sans-serif;
+	font-weight: 700;
 }
 
 /*-----------------------
@@ -626,6 +641,119 @@ ul li {
 }
 
 /*-----------------------
+9.3 Footer
+-----------------------*/
+
+#footer {
+	background-color: #1b68ab;
+	padding: 40px 0 0;
+}
+
+#footer .row .col-xs-12:last-child {
+	margin-top: 0;
+}
+
+.footer-logo,
+.footer-logo img{
+	display: block;
+	height: auto;
+	margin: 0;
+}
+
+.footer-logo {
+	width: 170px;
+}
+
+.footer-logo img {
+	width: 100%;
+}
+
+.footer-menu,
+.footer-menu li {
+	display: block;
+}
+
+.footer-menu li {
+	margin: 0;
+}
+
+.footer-menu li:first-child a {
+	padding-top: 0px!important;
+}
+
+.footer-menu li:last-child a {
+	padding-bottom: 0px!important;
+}
+
+.footer-menu li a:link,
+.footer-menu li a:visited {
+	display: inline-block;
+	padding: 5px 0;
+	text-decoration: none;
+	color: #fff;
+}
+
+.footer-widget-box li a:link,
+.footer-widget-box li a:visited {
+	font-size: 0.8em;
+	display: inline-block;
+	text-decoration: none;
+	color: #fff;
+}
+
+.footer-menu li a:hover,
+.footer-menu li a:active,
+.footer-widget-box li a:hover,
+.footer-widget-box li a:active {
+	color: #fff602;
+}
+
+.footer-widget-box h4 {
+	color: #fff;
+	font-family: "MuseoSans700", sans-serif;
+	font-weight: 700;
+	margin: 0 0 15px;
+}
+
+.footer-info-box p {
+	color: #fff;
+}
+
+/* Copy */
+
+.copy {
+	padding: 8px 0;
+	color: #fff;
+	background-color: #0e406d;
+	margin: 25px 0 0;
+	text-align: left;
+}
+
+.logo-delucca {
+	float: right;
+	display: inline;
+	margin: 0;
+}
+
+.logo-delucca a:link,
+.logo-delucca a:visited {
+	display: block;
+	text-indent: -999999px;
+	width: 19px;
+	height: 14px;
+	margin: 0;
+	background: url(assets/images/logo/logo-delucca.png) no-repeat;
+	background-size: cover;
+	background-position: center bottom;
+	transition: 0.2s ease-out;
+}
+
+.logo-delucca a:hover,
+.logo-delucca a:active {
+	background-position: center top;
+}
+
+/*-----------------------
 9.X Queries
 -----------------------*/
 
@@ -671,6 +799,31 @@ ul li {
 		margin-top: 5%;
 	}
 	
+	/* Footer */
+	
+	#footer .row .col-xs-12:last-child {
+		margin-top: 50px;
+	}
+	
+	.footer-logo,
+	.footer-logo img{
+		margin: 0 auto 50px;
+	}
+	
+	.footer-menu,
+	.widget-wrapper {
+		text-align: center;
+	}
+	
+	.footer-widget-box h4 {
+		margin: 0;
+	}
+	
+	.logo-delucca a:link,
+	.logo-delucca a:visited {
+		background-position: center top;
+	}
+	
 }
 
 @media (max-width: 460px) {
@@ -692,6 +845,23 @@ ul li {
 	.navbar-brand img {
     width: 45%;
     transform: translate(0,-32%);
+	}
+	
+	/* Footer */
+	
+	.copy {
+		text-align: center;
+	}
+	
+	.logo-delucca {
+		float: none;
+		display: block;
+		margin: 10px 0 0;
+	}
+	
+	.logo-delucca a:link,
+	.logo-delucca a:visited {
+		margin: 0 auto;
 	}
 	
 }
