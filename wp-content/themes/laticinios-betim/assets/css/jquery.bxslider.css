@@ -104,7 +104,7 @@
 /* DIRECTION CONTROLS (NEXT / PREV) */
 
 .bx-wrapper .bx-prev {
-	left: 10px;
+	left: 0px;
 	background: url(../bxslider/controls.png) no-repeat 0 0;
 }
 

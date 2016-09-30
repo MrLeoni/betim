@@ -491,6 +491,65 @@ ul li {
 	font-weight: 700;
 }
 
+.link-box {
+	text-align: center;
+}
+
+.fallback-alert {
+	background-color: #FFE5BF;
+	padding: 5% 0;
+	color: #f67605;
+	text-align: center;
+}
+
+.fallback-alert h2 {
+	margin-bottom: 20px;
+}
+
+.banner {
+	background-size: cover;
+	padding: 300px;
+}
+
+/* Default Link Button */
+
+.fill:before {
+	content: " ";
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: #f67605;
+	z-index: -9;
+	position: absolute;
+	top: 0;
+	left: -100%;
+	transition: 0.3s ease-out;
+}
+
+.custom-btn:link,
+.custom-btn:visited {
+	display: inline-block;
+	color: #f67605;
+	background-color: transparent;
+	border: 1px solid #f67605;
+	border-radius: 20px;
+	padding: 8px 28px;
+	text-decoration: none;
+	position: relative;
+	z-index: 999;
+	overflow: hidden;
+}
+
+.custom-btn:hover.fill:before {
+	left: 0;
+}
+
+.custom-btn:hover,
+.custom-btn:active {
+	color: #fff;
+	border-color: transparent;
+}
+
 /*-----------------------
 9.2 Header
 -----------------------*/
@@ -722,6 +781,17 @@ ul li {
 	color: #fff;
 }
 
+.footer-info-box a:link,
+.footer-info-box a:visited {
+	color: #fff;
+	text-decoration: none;
+}
+
+.footer-info-box a:hover,
+.footer-info-box a:active {
+	color: #fff602;
+}
+
 /* Copy */
 
 .copy {
@@ -790,6 +860,8 @@ ul li {
 
 #home-produtos {
 	background-color: #ffe5bf;
+	text-align: center;
+	padding: 5% 0 3%;
 }
 
 #home-produtos .row {
@@ -818,14 +890,90 @@ ul li {
 	height: 300px;
 	line-height: 300px;
 	text-align: center;
+	margin-left: 0;
 }
 
-.produto-link:link {
-	position: absolute;
-	bottom: -45%;
-	left: 50%;
-	transform: translate(-50%,0);
+.produto-link {
+	margin: 5% 0 0;
 }
+
+/* Receitas */
+
+#receitas {
+	background: url(assets/images/home/home-parallax.png) no-repeat center;
+	background-size: cover;
+	background-attachment: fixed;
+	padding: 3% 0 5%;
+}
+
+#receitas h3 {
+	margin: 0 0 4%;
+	text-align: center;
+	color: #f67605;
+}
+
+.receita-wrapper {
+	margin: 0;
+}
+
+.receita-info-box {
+	padding: 20px;
+	background-color: #f67605;
+	border-radius: 0 0 10px 10px;
+}
+
+.receita-info-box a:link,
+.receita-info-box a:visited {
+	display: inline-block;
+	color: #fff602;
+	margin: 0 0 25px;
+	letter-spacing: 1px;
+}
+
+.receita-info-box p {
+	color: #fff;
+}
+
+.receita-img-link {
+	overflow: hidden;
+	display: block;
+	background-color: #f67605;
+}
+
+.receita-img-link:link img,
+.receita-img-link:visited img {
+	display: block;
+  width: 100%;
+  height: auto;
+  opacity: 1;
+  transform: scale(1.0);
+  transition: 0.3s ease-out;
+}
+
+.receita-img-link:hover img {
+	transform: scale(1.1);
+	opacity: 0.7;
+}
+
+#receitas .fill:before {
+	left: 0;
+}
+
+#receitas .custom-btn:link,
+#receitas .custom-btn:visited {
+	color: #fff;
+	border-color: transparent;
+}
+
+#receitas .custom-btn:hover.fill:before {
+	background-color: #fff;
+}
+
+#receitas .custom-btn:hover,
+#receitas .custom-btn:active {
+	color: #f67605;
+}
+
 
 /*-----------------------
 9.X Queries
@@ -898,6 +1046,16 @@ ul li {
 		background-position: center top;
 	}
 	
+	/* Home - Receitas */
+	
+	.home-receita-wrapper {
+		margin: 0 0 10%;
+	}
+	
+	.receita-wrapper {
+    margin: 0 0 5%;
+	}
+	
 }
 
 @media (max-width: 460px) {
@@ -936,6 +1094,11 @@ ul li {
 	.logo-delucca a:link,
 	.logo-delucca a:visited {
 		margin: 0 auto;
+	}
+	
+	/* Home - Produtos */
+	.produtos-slider-wrapper .home-produtos li {
+		margin-left: 3px;
 	}
 	
 }
