@@ -507,8 +507,8 @@ ul li {
 }
 
 .banner {
-	background-size: cover;
-	padding: 300px;
+	background-size: cover!important;
+	padding: 225px 0;
 }
 
 /* Default Link Button */
@@ -974,6 +974,22 @@ ul li {
 	color: #f67605;
 }
 
+/*-----------------------
+9.5 Quem Somos
+-----------------------*/
+
+#quem-somos {
+	background-size: cover!important;
+	background-attachment: fixed!important;
+	padding: 10% 0;
+	text-align: center;
+	color: #fff;
+}
+
+#quem-somos h2 {
+	color: #fff;
+	margin-bottom: 30px;
+}
 
 /*-----------------------
 9.X Queries
@@ -1004,6 +1020,13 @@ ul li {
 }
 
 @media (max-width: 768px) {
+	
+	/* Classes */
+	
+	.banner {
+    background-size: cover!important;
+    padding: 150px 0;
+	}
 	
 	/* Header - Navigation */
 	
