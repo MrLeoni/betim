@@ -28,7 +28,7 @@ $product_query_args = array(
 		"terms"			=>	"home-produtos",
 	)),
 );
-// Querying posts with $banner_query_args
+// Querying posts with $product_query_args
 $product_query = new WP_Query( $product_query_args );
 
 // Set args to query "Receitas" post type
@@ -36,7 +36,7 @@ $receitas_query_args = array(
 	"posts_per_page"	=>	2,
 	"post_type"	=> "receitas",
 );
-
+// Querying posts with $receitas_query_args
 $receitas_query = new WP_Query( $receitas_query_args );
 
 get_header(); ?>
@@ -73,7 +73,7 @@ get_header(); ?>
 			<section id="home-produtos">
 				<div class="container">
 					<div class="row">
-						<div class="col-sm-4 mask hidden-xs"><!-- empty --></div>
+						<div class="col-sm-4 mask hidden-sm"><!-- empty --></div>
 						<div class="col-sm-4">
 							<div class="produtos-slider-wrapper">
 								<?php if($product_query->have_posts()): ?>
@@ -103,12 +103,12 @@ get_header(); ?>
 								<a class="fill custom-btn produto-link" href="<?php echo esc_html(home_url("/produtos")); ?>" title="Produtos">Ver todos</a>
 							</div>
 						</div>
-						<div class="col-sm-4 mask hidden-xs"><!-- empty --></div>
+						<div class="col-sm-4 mask hidden-sm"><!-- empty --></div>
 					</div>
 				</div>
 			</section>
 			
-			<section id="receitas">
+			<section id="receitas" class="home">
 				<div class="container">
 					<div class="row">
 						<h3 class="museo-500">Receitas</h3>

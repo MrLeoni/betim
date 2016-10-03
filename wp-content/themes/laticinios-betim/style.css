@@ -899,10 +899,37 @@ ul li {
 
 /* Receitas */
 
-#receitas {
+#receitas.home {
 	background: url(assets/images/home/home-parallax.png) no-repeat center;
 	background-size: cover;
 	background-attachment: fixed;
+	padding: 3% 0 5%;
+}
+
+/*-----------------------
+9.5 Quem Somos
+-----------------------*/
+
+#quem-somos {
+	background-size: cover!important;
+	background-attachment: fixed!important;
+	padding: 10% 0;
+	text-align: center;
+	color: #fff;
+}
+
+#quem-somos h2 {
+	color: #fff;
+	margin-bottom: 30px;
+	font-size: 1.8em;
+}
+
+/*-----------------------
+9.6 Receitas
+-----------------------*/
+
+#receitas {
+	background-color: #ffe5bf;
 	padding: 3% 0 5%;
 }
 
@@ -913,13 +940,15 @@ ul li {
 }
 
 .receita-wrapper {
-	margin: 0;
+	margin-bottom: 5%;
 }
 
 .receita-info-box {
 	padding: 20px;
 	background-color: #f67605;
 	border-radius: 0 0 10px 10px;
+	height: 180px;
+	overflow: hidden;
 }
 
 .receita-info-box a:link,
@@ -938,6 +967,8 @@ ul li {
 	overflow: hidden;
 	display: block;
 	background-color: #f67605;
+	height: 300px;
+	width: 100%;
 }
 
 .receita-img-link:link img,
@@ -975,23 +1006,6 @@ ul li {
 }
 
 /*-----------------------
-9.5 Quem Somos
------------------------*/
-
-#quem-somos {
-	background-size: cover!important;
-	background-attachment: fixed!important;
-	padding: 10% 0;
-	text-align: center;
-	color: #fff;
-}
-
-#quem-somos h2 {
-	color: #fff;
-	margin-bottom: 30px;
-}
-
-/*-----------------------
 9.X Queries
 -----------------------*/
 
@@ -1021,7 +1035,7 @@ ul li {
 
 @media (max-width: 768px) {
 	
-	/* Classes */
+	/* Setup - Classes */
 	
 	.banner {
     background-size: cover!important;
@@ -1069,14 +1083,20 @@ ul li {
 		background-position: center top;
 	}
 	
-	/* Home - Receitas */
+	/* Receitas */
 	
 	.home-receita-wrapper {
 		margin: 0 0 10%;
 	}
 	
-	.receita-wrapper {
-    margin: 0 0 5%;
+	.receita-info-box {
+		height: auto;
+	}
+	
+	.receita-img-link:link img,
+	.receita-img-link:visited img {
+	  width: 100%;
+	  height: auto;
 	}
 	
 }

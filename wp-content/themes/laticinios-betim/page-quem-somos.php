@@ -26,13 +26,13 @@ get_header(); ?>
 <div id="quem-somos" style="background: linear-gradient(rgba(250, 164, 26, 0.4),rgba(250, 164, 26, 0.4)), url(<?php echo $bg_img["url"]; ?>) no-repeat center">
 	<div class="container">
 		<div class="row col-sm-offset-2 col-sm-8 museo-300">
-		  <?php
-		  	while(have_posts()): the_post();
-		  		the_title("<h2 class='museo-500'>", "</h2>");
-		  		the_content();
-		  	endwhile
-		  ?>
-		  <a href="<?php echo $link_url; ?>" title="<?php echo $link_title; ?>" class="fill custom-btn produto-link"><?php echo $link_name; ?></a>
+			<?php
+				while(have_posts()): the_post();
+					the_title("<h2 class='museo-500'>", "</h2>");
+					the_content();
+				endwhile
+			?>
+			<a href="<?php echo $link_url; ?>" title="<?php echo $link_title; ?>" class="fill custom-btn produto-link"><?php echo $link_name; ?></a>
 		</div>
 	</div>
 </div>
