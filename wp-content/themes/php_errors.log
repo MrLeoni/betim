@@ -1,0 +1,3 @@
+[04-Oct-2016 12:16:27 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/ubuntu/workspace/wp-content/themes/laticinios-betim/index.php on line 15
+[04-Oct-2016 12:16:27 UTC] PHP Stack trace:
+[04-Oct-2016 12:16:27 UTC] PHP   1. {main}() /home/ubuntu/workspace/wp-content/themes/laticinios-betim/index.php:0

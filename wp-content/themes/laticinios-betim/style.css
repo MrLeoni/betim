@@ -1006,6 +1006,174 @@ ul li {
 }
 
 /*-----------------------
+9.7 Receitas Interna
+-----------------------*/
+
+/*-----------------------
+9.8 Emporio
+-----------------------*/
+
+#emporio {
+	background-color: #ffe5bf;
+	padding: 70px 0 140px;
+}
+
+#emporio .fill:before {
+	opacity: 0;
+	top: 70%;
+	left: 0;
+}
+
+#emporio .custom-btn:link,
+#emporio .custom-btn:visited {
+	border-radius: 5px;
+}
+
+#emporio .custom-btn:hover.fill:before {
+	top: 0;
+	opacity: 1;
+}
+
+#emporio .custom-btn:hover,
+#emporio .custom-btn:active {
+	color: #fff;
+	border-color: transparent;
+}
+
+.emporio-img-box img {
+	display: block;
+	width: 90%;
+	height: auto;
+	margin: 0 auto;
+}
+
+/*-----------------------
+9.9 Curiosidades
+-----------------------*/
+
+#curiosidade {
+	background-color: #ffe5bf;
+	padding: 70px 0 140px;
+}
+
+.curiosidade-info-box {
+	margin-bottom: 50px;
+}
+
+.curiosidade-info-box,
+.curiosidade-info-box p{
+	color: #8a673c;
+}
+
+/*-----------------------
+9.10 Contato
+-----------------------*/
+
+#contato {
+	background-color: #ffe5bf;
+}
+
+.col-md-6.map-box {
+	padding-right: 0;
+	padding-left: 15px;
+}
+
+.map-box iframe{
+	display: block;
+	width: 100%;
+	height: 800px;
+}
+
+.submit-btn {
+	float: right;
+	display: inline-block;
+	background-color: #f67605;
+	box-shadow: none;
+	border-color: transparent;
+	padding: 5px 30px;
+	color: #fff;
+	border-radius: 20px;
+	transition: 0.3s ease-out;
+}
+
+.submit-btn:hover {
+	background-color: #fff;
+	color: #f67605;
+}
+
+.submit-btn:focus {
+	outline: none;
+	border-color: transparent;
+}
+
+.form-group label {
+	color: #f67605;
+}
+
+.form-group .form-control {
+	display: block;
+	width: 100%;
+}
+
+.form-group .form-control:focus {
+	outline: #f67605;
+	border-color: #f67605;
+}
+
+.contato-content {
+	padding-top: 50px;
+	padding-bottom: 80px;
+}
+
+/*-----------------------
+9.11 Produtos
+-----------------------*/
+
+.page-content-box {
+	padding: 40px 0;
+	background-color: #ffe5bf;
+}
+
+.produtos-wrapper {
+	background-color: #fff;
+	padding: 30px 0 50px;
+}
+
+.category-menu {
+	text-align: center;
+}
+
+.category-menu,
+.category-menu .cat-btn{
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.cat-btn {
+	color: #f67605;
+	background-color: #ffe5bf;
+	padding: 10px;
+	border-radius: 5px;
+	margin: 0 0 2%;
+	position: relative;
+	left: 0;
+	transition: 0.3s ease-out;
+}
+
+.cat-btn:hover,
+.cat-btn.active {
+	color: #fff;
+	cursor: pointer;
+	background-color: #f67605;
+	left: 10px;
+}
+
+/*-----------------------
+9.12 Produtos Interna
+-----------------------*/
+
+/*-----------------------
 9.X Queries
 -----------------------*/
 
@@ -1029,6 +1197,16 @@ ul li {
 	
 	.navbar-brand img {
     transform: translate(0%,-25%);
+	}
+	
+	/* Contato */
+	
+	.col-md-6.map-box {
+		padding-left: 0;
+	}
+	
+	.map-box iframe{
+		height: 450px;
 	}
 	
 }
@@ -1142,6 +1320,13 @@ ul li {
 	/* Home - Produtos */
 	.produtos-slider-wrapper .home-produtos li {
 		margin-left: 3px;
+	}
+	
+	/* Emporio */
+	
+	#emporio,
+	#curiosidade {
+		padding: 35px 0 70px;
 	}
 	
 }
