@@ -173,16 +173,20 @@ require get_template_directory() . '/inc/jetpack.php';
  	$labels = array( 'name' => 'Receitas', 'singular_name' => 'Receita' );
 	$args = array(
 		'labels' => $labels,
+		'hierarchical' => false,
+		'supports' => array( 'title', 'editor' ),
 		'public' => true,
-		'publicly_queryable' => true,
 		'show_ui' => true,
+		'show_in_menu' => true,
+		'show_in_nav_menus' => false,
+		'publicly_queryable' => true,
+		'exclude_from_search' => false,
+		'has_archive' => true,
 		'query_var' => true,
-		'menu_icon' => 'dashicons-media-text',
+		'can_export' => true,
 		'rewrite' => true,
 		'capability_type' => 'post',
-		'hierarchical' => false,
-		'menu_position' => null,
-		'supports' => array('title','editor','thumbnail')
+		'menu_icon' => 'dashicons-media-text',
 	);
  	
  	register_post_type("receitas", $args);
@@ -243,3 +247,11 @@ require get_template_directory() . '/inc/jetpack.php';
   	
   	register_taxonomy("tipo", "complementos", $args);
   }
+  
+  /**
+   * Filter excerpt length to 20 characters
+   */
+function custom_excerpt_length( $length ) {
+	return 15;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );

@@ -32,7 +32,7 @@ get_header(); ?>
 					the_content();
 				endwhile
 			?>
-			<a href="<?php echo $link_url; ?>" title="<?php echo $link_title; ?>" class="fill custom-btn produto-link"><?php echo $link_name; ?></a>
+			<a href="<?php echo $link_url; ?>" title="<?php echo $link_title; ?>" class="museo-700 fill custom-btn produto-link"><?php echo $link_name; ?></a>
 		</div>
 	</div>
 </div>
