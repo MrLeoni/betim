@@ -468,7 +468,40 @@ ul li {
 
 /* Search Form */
 
+.custom-search-form {
+	color: #fff;
+}
 
+.custom-search-form input,
+.custom-search-form .search-btn {
+	display: block;
+	background-color: transparent;
+	border: 0;
+}
+
+.custom-search-form input:focus,
+.custom-search-form .search-btn:focus {
+	outline: none;
+}
+
+.custom-search-form input {
+	width: 80%;
+	float: left;
+	position: relative;
+	top: 3px;
+}
+
+.custom-search-form .search-btn {
+	width: 20%;
+	float: right;
+	color: #f67605;
+	font-size: 1.4em;
+	transition: 0.2s ease-in;
+}
+
+.custom-search-form .search-btn:hover {
+	color: #fff;
+}
 
 /* Classes */
 
@@ -519,6 +552,12 @@ ul li {
 .entry-content {
 	color: #909090;
 	margin-bottom: 50px;
+}
+
+#page-default {
+	background-color: #ffe5bf;
+	padding: 70px 0 50px;
+	color: #f67605;
 }
 
 /* Default Link Button */
@@ -583,37 +622,6 @@ ul li {
 	background-color: #dc5b04;
 	border-radius: 3px;
 	padding: 4px;
-}
-
-.custom-search-form input,
-.custom-search-form .search-btn {
-	display: block;
-	background-color: transparent;
-	border: 0;
-}
-
-.custom-search-form input:focus,
-.custom-search-form .search-btn:focus {
-	outline: none;
-}
-
-.custom-search-form input {
-	width: 80%;
-	float: left;
-	position: relative;
-	top: 3px;
-}
-
-.custom-search-form .search-btn {
-	width: 20%;
-	float: right;
-	color: #f67605;
-	font-size: 1.4em;
-	transition: 0.2s ease-in;
-}
-
-.custom-search-form .search-btn:hover {
-	color: #fff;
 }
 
 .buy-wrapper {
@@ -1370,6 +1378,60 @@ ul li {
 .entry-footer .custom-btn.voltar:active {
 	background-color: #1b68ab;
 	color: #fff;
+}
+
+/*-----------------------
+9.X Archive, Search, 404 and "not found"
+-----------------------*/
+
+#search-page,
+#archive,
+.error-404 {
+	background-color: #fff;
+	padding: 3% 0 8%;
+}
+
+.error-404 {
+	padding: 8% 0;
+}
+
+.no-results .page-content,
+.error-404 .page-header,
+#search-page .page-header,
+#archive .page-header {
+	border: 0;
+	background-color: #ffe5bf;
+	padding: 30px 0;
+}
+
+.no-results .page-content p,
+.error-404 .page-header h1,
+.error-404 .page-header p,
+#search-page .page-header h1,
+#archive .page-header h1 {
+	color: #f67605;
+	text-align: center;
+}
+
+#archive .archive-post {
+	border-bottom: 2px dotted #1b68ab;
+	padding: 0 0 20px;
+}
+
+#search-page .custom-search-form {
+	background-color: #DC5B04;
+	border-radius: 5px;
+	padding: 10px;
+	width: 200px;
+	margin: 20px auto 0;
+}
+
+.search-post {
+	background-color: #ffe5bf;
+	border-radius: 5px;
+	color: #f67605;
+	padding-top: 15px;
+	padding-bottom: 15px;
 }
 
 /*-----------------------
