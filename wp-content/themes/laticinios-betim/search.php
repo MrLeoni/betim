@@ -21,8 +21,10 @@ get_header(); ?>
 							<?php
 							/* Start the Loop */
 							while ( have_posts() ) : the_post(); ?>
-								<div class="col-sm-4 search-post">
-									<?php get_template_part( 'template-parts/content', 'search' ); ?>
+								<div class="col-sm-4">
+									<div class="search-post">
+										<?php get_template_part( 'template-parts/content', 'search' ); ?>
+									</div>
 								</div>
 							<?php endwhile;
 							the_posts_navigation();

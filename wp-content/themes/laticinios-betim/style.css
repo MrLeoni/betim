@@ -454,6 +454,7 @@ p {
 }
 
 a {
+  -webkit-transition: 0.3s ease-out;
   transition: 0.3s ease-out;
   text-decoration: none;
 }
@@ -496,6 +497,7 @@ ul li {
 	float: right;
 	color: #f67605;
 	font-size: 1.4em;
+	-webkit-transition: 0.2s ease-in;
 	transition: 0.2s ease-in;
 }
 
@@ -572,6 +574,7 @@ ul li {
 	position: absolute;
 	top: 0;
 	left: -100%;
+	-webkit-transition: 0.3s ease-out;
 	transition: 0.3s ease-out;
 }
 
@@ -667,6 +670,7 @@ ul li {
 	display: block;
 	width: 100%;
 	height: auto;
+	-webkit-transform: translate(0%,-45%);
 	transform: translate(0%,-45%);
 	margin: 0 auto;
 }
@@ -836,6 +840,7 @@ ul li {
 	background: url(assets/images/logo/logo-delucca.png) no-repeat;
 	background-size: cover;
 	background-position: center bottom;
+	-webkit-transition: 0.2s ease-out;
 	transition: 0.2s ease-out;
 }
 
@@ -995,11 +1000,14 @@ ul li {
   width: 100%;
   height: auto;
   opacity: 1;
-  transform: scale(1.0);
+  -webkit-transform: scale(1.0);
+	transform: scale(1.0);
+  -webkit-transition: 0.3s ease-out;
   transition: 0.3s ease-out;
 }
 
 .receita-img-link:hover img {
+	-webkit-transform: scale(1.1);
 	transform: scale(1.1);
 	opacity: 0.7;
 }
@@ -1128,6 +1136,7 @@ ul li {
 	padding: 5px 30px;
 	color: #fff;
 	border-radius: 20px;
+	-webkit-transition: 0.3s ease-out;
 	transition: 0.3s ease-out;
 }
 
@@ -1196,6 +1205,7 @@ ul li {
 	margin: 0 0 2%;
 	position: relative;
 	left: 0;
+	-webkit-transition: 0.3s ease-out;
 	transition: 0.3s ease-out;
 }
 
@@ -1226,6 +1236,7 @@ ul li {
   top: 0;
   left: 50%;
   z-index: 9;
+  -webkit-transition: 0.3s ease-out;
   transition: 0.3s ease-out;
   opacity: 0;
 }
@@ -1241,6 +1252,7 @@ ul li {
 .product-link p {
 	position: absolute;
 	top: 50%;
+	-webkit-transform: translate(-50%,-50%);
 	transform: translate(-50%,-50%);
 }
 
@@ -1248,6 +1260,7 @@ ul li {
 	color: #fff;
 	z-index: 99;
 	left: 0;
+	-webkit-transition: 0.3s ease-out;
 	transition: 0.3s ease-out;
 	opacity: 0;
 }
@@ -1418,6 +1431,12 @@ ul li {
 	padding: 0 0 20px;
 }
 
+#search-page .page-header {
+	margin-right: 15px;
+	margin-left: 15px;
+	border-radius: 5px;
+}
+
 #search-page .custom-search-form {
 	background-color: #DC5B04;
 	border-radius: 5px;
@@ -1430,8 +1449,9 @@ ul li {
 	background-color: #ffe5bf;
 	border-radius: 5px;
 	color: #f67605;
-	padding-top: 15px;
-	padding-bottom: 15px;
+	padding: 15px;
+	margin: 0 0 30px;
+	height: 250px;
 }
 
 /*-----------------------
@@ -1457,7 +1477,8 @@ ul li {
 	}
 	
 	.navbar-brand img {
-    transform: translate(0%,-25%);
+    -webkit-transform: translate(0%,-25%);
+		transform: translate(0%,-25%);
 	}
 	
 	/* Contato */
@@ -1489,6 +1510,7 @@ ul li {
 	
 	.navbar-brand img {
 		width: 80%;
+    -webkit-transform: translate(0,-40%);
     transform: translate(0,-40%);
 		margin: 0;
 	}
@@ -1555,6 +1577,7 @@ ul li {
 		left: 20px;
 		top: 86%;
 		opacity: 1;
+		-webkit-transform: none;
 		transform: none;
 	}
 	
@@ -1597,6 +1620,7 @@ ul li {
 	
 	.navbar-brand img {
     width: 45%;
+    -webkit-transform: translate(0,-32%);
     transform: translate(0,-32%);
 	}
 	
