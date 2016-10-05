@@ -38,6 +38,16 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 	9.1 Setup
 	9.2 Header
 	9.3 Footer
+	9.4 Home
+	9.5 Quem Somos 
+	9.6 Receitas
+	9.7 Receitas Interna
+	9.8 Emporio
+	9.9 Curiosidade
+	9.10 Contato 
+	9.11 Produtos
+	9.12 Produto Interna
+	9.13 Archive / Search / 404 and "Not Found"
 	9.x Queries
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
@@ -1394,7 +1404,7 @@ ul li {
 }
 
 /*-----------------------
-9.X Archive, Search, 404 and "not found"
+9.13 Archive, Search, 404 and "not found"
 -----------------------*/
 
 #search-page,
