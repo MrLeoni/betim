@@ -4,7 +4,7 @@ Theme URI: http://underscores.me/
 Author: Agência Delucca
 Author URI: http://www.agenciadelucca.com.br
 Description: Catalogo online Laticínios Betim
-Version: 1.0.0
+Version: 1.0.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: laticinios-betim
@@ -1018,7 +1018,7 @@ ul li {
 
 .receita-img-link:hover img {
 	-webkit-transform: scale(1.1);
-	transform: scale(1.1);
+	transform: scale(1.1) rotate(2deg);
 	opacity: 0.7;
 }
 

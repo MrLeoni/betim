@@ -174,7 +174,7 @@ require get_template_directory() . '/inc/jetpack.php';
 	$args = array(
 		'labels' => $labels,
 		'hierarchical' => false,
-		'supports' => array( 'title', 'editor' ),
+		'supports' => array( 'title', 'editor', 'thumbnail' ),
 		'public' => true,
 		'show_ui' => true,
 		'show_in_menu' => true,

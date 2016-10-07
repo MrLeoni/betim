@@ -19,7 +19,7 @@
 				<?php the_content(); ?>
 			</div><!-- .entry-content -->
 			<div class="entry-footer">
-			  <a class="custom-btn voltar" href="<?php echo esc_html(home_url("/receitas")); ?>" title="Produtos">Voltar</a>
+			  <a class="custom-btn voltar" href="<?php echo esc_html(home_url("/receita")); ?>" title="Receitas">Voltar</a>
 			</div>
 		</div>
 	</div>

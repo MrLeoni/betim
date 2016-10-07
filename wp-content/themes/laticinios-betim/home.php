@@ -136,7 +136,7 @@ get_header(); ?>
 								wp_reset_postdata();
 							?>
 							<div class="link-box">
-								<a class="fill custom-btn produto-link" href="<?php echo esc_html(home_url("/receitas")); ?>" title="Receitas">Ver todas</a>
+								<a class="fill custom-btn produto-link" href="<?php echo esc_html(home_url("/receita")); ?>" title="Receitas">Ver todas</a>
 							</div>
 						<?php
 							else:
