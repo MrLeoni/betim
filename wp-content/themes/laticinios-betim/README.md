@@ -1,3 +1,14 @@
+## Version 1.1.1
+
+#### Changes in this version
+
+* Change layout of the products page
+* Debugged logo in header
+* Added name to products of the slider on the home page
+
+<br>
+<br>
+
 ## Version 1.0.1
 
 #### Changes in this version
