@@ -3,8 +3,8 @@ Theme Name: Laticínios Betim
 Theme URI: http://underscores.me/
 Author: Agência Delucca
 Author URI: http://www.agenciadelucca.com.br
-Description: Catalogo online Laticínios Betim
-Version: 1.0.1
+Description: Catálogo online Laticínios Betim
+Version: 1.1.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: laticinios-betim
@@ -34,7 +34,8 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 8.0 Media
 	8.1 Captions
 	8.2 Galleries
-9.0 Custom CSS
+	
+9.0 Author CSS
 	9.1 Setup
 	9.2 Header
 	9.3 Footer
@@ -48,7 +49,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 	9.11 Produtos
 	9.12 Produto Interna
 	9.13 Archive / Search / 404 and "Not Found"
-	9.x Queries
+	9.14 Queries
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 1.0 Navigation
@@ -464,8 +465,8 @@ p {
 }
 
 a {
-  -webkit-transition: 0.3s ease-out;
-  transition: 0.3s ease-out;
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
   text-decoration: none;
 }
 
@@ -678,7 +679,7 @@ ul li {
 
 .navbar-brand img {
 	display: block;
-	width: 100%;
+	width: 180px;
 	height: auto;
 	-webkit-transform: translate(0%,-45%);
 	transform: translate(0%,-45%);
@@ -717,7 +718,8 @@ ul li {
 }
 
 .custom-navbar.navbar-default .navbar-nav>li>a:hover,
-.custom-navbar.navbar-default .navbar-nav>li>a:active {
+.custom-navbar.navbar-default .navbar-nav>li>a:active,
+.custom-navbar.navbar-default .navbar-nav>li.current-menu-item>a{
 	color: #fff602;
 }
 
@@ -902,7 +904,7 @@ ul li {
 }
 
 #home-produtos .mask {
-	padding: 0 0 25%;
+	padding: 0 0 30%;
   background-color: rgba(255, 229, 191, 0.7);
   position: relative;
   z-index: 99;
@@ -912,23 +914,24 @@ ul li {
 	background-color: transparent;
 	border-color: transparent;
 	box-shadow: none;
-	overflow: visible!important;
-}
+	overflow: visible!important
+} 
 
 .produtos-slider-wrapper .bx-wrapper img {
-	display: inline;
+	margin: 0 auto
 }
 
 .produtos-slider-wrapper .home-produtos li {
-	height: 300px;
-	line-height: 300px;
-	text-align: center;
-	margin-left: 0;
+	top: 100px;
+}
+
+.home-produtos p {
+	color: #f67605;
 }
 
 .produto-link {
 	margin: 5% 0 0;
-}
+} 
 
 /* Receitas */
 
@@ -1183,6 +1186,10 @@ ul li {
 9.11 Produtos
 -----------------------*/
 
+.banner.produtos {
+	padding: 125px 0;
+}
+
 /* Filtros */
 
 .page-content-box {
@@ -1227,83 +1234,17 @@ ul li {
 	left: 10px;
 }
 
-/* Image Link */
-
 .product-wrapper {
-	border: 1px solid #f67605;
-	border-radius: 10px;
+	border-bottom: 1px solid #f67605;
 	overflow: hidden;
 	margin: 0 0 30px;
-}
-
-.product-link:before {
-	content: " ";
-	display: block;
-	width: 100%;
-	height: 100%;
-	background-color: #f67605;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  z-index: 9;
-  -webkit-transition: 0.3s ease-out;
-  transition: 0.3s ease-out;
-  opacity: 0;
-}
-
-.product-link img {
-	display: block;
-	height: 90%;
-	width: auto;
-	left: 50%;
-}
-
-.product-link img,
-.product-link p {
-	position: absolute;
-	top: 50%;
-	-webkit-transform: translate(-50%,-50%);
-	transform: translate(-50%,-50%);
-}
-
-.product-link p {
-	color: #fff;
-	z-index: 99;
-	left: 0;
-	-webkit-transition: 0.3s ease-out;
-	transition: 0.3s ease-out;
-	opacity: 0;
-}
-
-.product-link:link,
-.product-link:visited {
-	display: block;
-	width: 100%;
-	height: 250px;
-	border-bottom: 1px solid #f67605;
-	position: relative;
-	overflow: hidden;
-}
-
-.product-link:hover p,
-.product-link:active p {
-	left: 50%;
-	opacity: 1;
-}
-
-.product-link:hover:before,
-.product-link:active:before {
-	left: 0;
-	opacity: 1;
 }
 
 /* Infos */
 
 .product-info {
-	padding: 10px;
+	padding: 20px 10px 30px;
 	width: 100%;
-	height: 200px;
-	text-align: center;
 	position: relative;
 }
 
@@ -1313,14 +1254,8 @@ ul li {
 	margin: 10px 0;
 }
 
-.product-info h4 a:link,
-.product-info h4 a:visited {
-	text-decoration: none;
-}
-
-.product-info h4 a:hover,
-.product-info h4 a:active {
-	color: #f67605;
+.product-info h4 {
+	color: #23527c;
 }
 
 .product-info p {
@@ -1330,24 +1265,28 @@ ul li {
 	display: block;
 }
 
-@media (max-width: 550px) {
-	.product-info p {
-		display: none;
-	}
+/* Product Link */
+
+.product-link-box {
+	position: absolute;
+	bottom: -50px;
+	left: 50%;
+	-webkit-transform: translate(-50%);
+	transform: translate(-50%);
+	-webkit-transition: 0.2s ease;
+	transition: 0.2s ease;
 }
 
-/* Orçamento Btn */
+.product-info:hover .product-link-box {
+	bottom: -6px;
+}
 
 #produtos .custom-btn {
-	background-color: #ffe5bf;
-	border-radius: 5px;
+	padding: 10px;
+	border-radius: 5px 5px 0 0;
 	border-color: transparent;
+	background-color: #ffe5bf;
 	color: #f67605;
-	position: absolute;
-	bottom: 10px;
-	left: 20px;
-	right: 20px;
-	padding: 10px 0;
 }
 
 #produtos .custom-btn:hover {
@@ -1403,9 +1342,9 @@ ul li {
 	color: #fff;
 }
 
-/*-----------------------
+/*-----------------------------------------
 9.13 Archive, Search, 404 and "not found"
------------------------*/
+------------------------------------------*/
 
 #search-page,
 #archive,
@@ -1465,7 +1404,7 @@ ul li {
 }
 
 /*-----------------------
-9.X Queries
+9.14 Queries
 -----------------------*/
 
 @media (max-width: 1200px) {
@@ -1474,6 +1413,11 @@ ul li {
 	
 	.custom-navbar .navbar-nav>li {
 		margin-right: 2%;
+	}
+	
+	/* Home - Produtos */
+	#home-produtos .mask {
+		padding: 0 0 50%;
 	}
 	
 }
@@ -1576,30 +1520,11 @@ ul li {
     margin: 0 0 30px;
 	}
 	
-	.product-link:before {
-	  top: 80%;
-	  left: 0;
-	  z-index: 9;
-	  opacity: 1;
-	}
-	
-	.product-link p {
-		left: 20px;
-		top: 86%;
-		opacity: 1;
+	.product-link-box {
+		bottom: -10px;
+		left: 8px;
 		-webkit-transform: none;
 		transform: none;
-	}
-	
-	.product-link:hover p,
-	.product-link:active p {
-		left: 20px;
-	}
-	
-	.product-link:hover:before,
-	.product-link:active:before {
-		top: 80%;
-		left: 0;
 	}
 	
 	/* Produtos - Interna */
@@ -1664,14 +1589,6 @@ ul li {
 	}
 	
 	/* Produtos */
-	
-	.product-link:link, .product-link:visited {
-    height: 180px;
-	}
-	
-	.product-info {
-		height: 150px;
-	}
 	
 	.product-info h4 {
     margin: 0;

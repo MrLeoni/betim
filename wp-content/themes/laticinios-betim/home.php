@@ -73,7 +73,7 @@ get_header(); ?>
 			<section id="home-produtos">
 				<div class="container">
 					<div class="row">
-						<div class="col-sm-4 mask hidden-sm"><!-- empty --></div>
+						<div class="col-sm-4 mask hidden-xs"><!-- empty --></div>
 						<div class="col-sm-4">
 							<div class="produtos-slider-wrapper">
 								<?php if($product_query->have_posts()): ?>
@@ -85,7 +85,8 @@ get_header(); ?>
 												$product_img = get_field("home-produtos-img");
 												// Display content ?>
 												<li>
-													<img src="<?php echo $product_img["url"]; ?>" alt="<?php echo $product_img["alt"]; ?>" title="<?php echo $product_img["caption"]; ?>">
+													<img src="<?php echo $product_img["url"]; ?>" alt="<?php echo $product_img["alt"]; ?>">
+													<?php the_title("<p>", "</p>"); ?>
 												</li>
 												<?php // End of the loop
 											endwhile;
@@ -103,7 +104,7 @@ get_header(); ?>
 								<a class="fill custom-btn produto-link" href="<?php echo esc_html(home_url("/produtos")); ?>" title="Produtos">Ver todos</a>
 							</div>
 						</div>
-						<div class="col-sm-4 mask hidden-sm"><!-- empty --></div>
+						<div class="col-sm-4 mask hidden-xs"><!-- empty --></div>
 					</div>
 				</div>
 			</section>

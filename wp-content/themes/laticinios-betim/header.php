@@ -65,7 +65,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="<?php echo esc_html( home_url("/") ); ?>" title="Laticínios Betim"><img src="<?php bloginfo("stylesheet_directory"); ?>/assets/images/logo/logo-betim.svg" alt="Laticínios Betim"></a>
+          <a class="navbar-brand" href="<?php echo esc_html( home_url("/") ); ?>" title="Laticínios Betim"><img src="<?php bloginfo("stylesheet_directory"); ?>/assets/images/logo/logo-betim.png" alt="Laticínios Betim"></a>
         </div>
         
         <!-- Collect the nav links, forms, and other content for toggling -->

@@ -16,6 +16,13 @@ $(document).ready(function() {
     startSlide: 3,
   });
   
+  // Correct "Conservas" img position
+  function correctImg() {
+    imgToCorrect = $(".home-produtos li");
+    $(imgToCorrect[3]).css("top", "0px");
+  }
+  correctImg();
+  
   /* Filtros Produtos */
   
   // Toggle ".active" class on the products filters
@@ -30,6 +37,11 @@ $(document).ready(function() {
     var category = $(this).attr("data-category");
     $(".product-box").fadeOut(120);
     $("."+category).delay(120).fadeIn(200);
+  });
+  
+  // Show all products
+  $("#show-all").click(function() {
+     $(".product-box") .fadeIn(120);
   });
   
 });

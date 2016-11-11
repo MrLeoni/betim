@@ -15,7 +15,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12 col-sm-3">
-					<a class="footer-logo" href="<?php echo esc_html( home_url("/") ); ?>" title="Laticínios Betim"><img src="<?php bloginfo("stylesheet_directory"); ?>/assets/images/logo/logo-betim.svg" alt="Laticínios Betim"></a>
+					<a class="footer-logo" href="<?php echo esc_html( home_url("/") ); ?>" title="Laticínios Betim"><img src="<?php bloginfo("stylesheet_directory"); ?>/assets/images/logo/logo-betim.png" alt="Laticínios Betim"></a>
 				</div>
 				<div class="col-xs-6 col-sm-3">
 					<?php
