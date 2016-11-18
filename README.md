@@ -1,3 +1,13 @@
+## Version 1.1.2
+### 18/11/16
+
+#### Changes in this version
+
+* Correct url of "Informações" link, in page-produtos.pgp
+
+<br>
+<br>
+
 ## Version 1.1.1
 
 #### Changes in this version
