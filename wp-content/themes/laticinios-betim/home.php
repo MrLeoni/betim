@@ -73,9 +73,10 @@ get_header(); ?>
 			<section id="home-produtos">
 				<div class="container">
 					<div class="row">
-						<div class="col-sm-4 mask hidden-xs"><!-- empty --></div>
-						<div class="col-sm-4">
+						<h3 class="home-products-title museo-500">Produtos</h3>
+						<div class="col-lg-offset-4 col-lg-4">
 							<div class="produtos-slider-wrapper">
+								
 								<?php if($product_query->have_posts()): ?>
 									<ul class="home-produtos">
 										<?php
@@ -84,27 +85,27 @@ get_header(); ?>
 												// Getting image from ACF field
 												$product_img = get_field("home-produtos-img");
 												// Display content ?>
+												
 												<li>
-													<img src="<?php echo $product_img["url"]; ?>" alt="<?php echo $product_img["alt"]; ?>">
-													<?php the_title("<p>", "</p>"); ?>
+													<img src="<?php echo $product_img["url"]; ?>" alt="<?php echo $product_img["alt"]; ?>" title="<?php echo get_the_title(); ?>">
 												</li>
+												
 												<?php // End of the loop
 											endwhile;
-											// Reset post data after custom query
 											wp_reset_postdata();
 										?>
 									</ul>
-								<?php
+									
+								<?php 
 									else:
 										echo "<div class='fallback-alert'><h2>Não existe conteúdo cadastrado em 'Complementos' do Tipo 'Home Produtos'</h2><p>Crie um post dentro dentro dessa categoria para que ele apareça aqui e essa mensagem desapareça</div>" ;
 									endif;
 								?>
 							</div>
 							<div class="link-box">
-								<a class="fill custom-btn produto-link" href="<?php echo esc_html(home_url("/produtos")); ?>" title="Produtos">Ver todos</a>
+								<a id="js-products-link" class="fill custom-btn produto-link" href="<?php echo esc_html(home_url("/produtos")); ?>" title="Produtos">Ver todos</a>
 							</div>
 						</div>
-						<div class="col-sm-4 mask hidden-xs"><!-- empty --></div>
 					</div>
 				</div>
 			</section>
@@ -153,3 +154,11 @@ get_header(); ?>
 
 <?php
 get_footer();
+
+/*
+
+<div class="link-box">
+	<a class="fill custom-btn produto-link" href="<?php echo esc_html(home_url("/produtos")); ?>" title="Produtos">Ver todos</a>
+</div>
+
+*/
